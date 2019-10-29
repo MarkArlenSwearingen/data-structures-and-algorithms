@@ -15,7 +15,7 @@ const greeting = (word) => {
 
 const speaker = (message, callback) => {
   // Solution code here...
-  return greeting(message);
+  return callback(message);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ const removeOne = (num, arr) => {
 const removeElements = (arr, callback) => {
   // Solution code here...
   for( let i = 1; i <= arr.length; i ++){
-    removeOne(i, arr);
+    callback(i, arr);
   }
   return arr;
 };
