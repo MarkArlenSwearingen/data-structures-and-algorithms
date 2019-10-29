@@ -127,7 +127,14 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-};
+  let list = [];
+  availableItems.forEach(function(element, index){
+    if(availableItems[index].available === true){
+      list.push(availableItems[index].name)
+    }
+  })
+  return list;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -145,7 +152,21 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-};
+  let fizzBuzz =[];
+  arr.forEach(function(element){
+    if (element % 3 === 0 && element % 5 ===0){
+      fizzBuzz.push('Fizz Buzz');
+    } else if (element % 3 === 0 ){
+      fizzBuzz.push('Fizz');
+    } else if (element % 5 === 0 ){
+      fizzBuzz.push('Buzz')
+    } else {
+      fizzBuzz.push(element);
+    }
+  })
+  return fizzBuzz
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
