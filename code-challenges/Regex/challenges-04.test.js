@@ -28,6 +28,8 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let regex = /[A-Z]\w*/gm;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +40,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let regex =/^[A-J].*/gm;
+  let myArr= [];
+  arr.forEach(function(element){
+    if(regex.test(element) === true){
+      (regex.test(element));
+      myArr.push(element);
+    }
+  })
+  return myArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
