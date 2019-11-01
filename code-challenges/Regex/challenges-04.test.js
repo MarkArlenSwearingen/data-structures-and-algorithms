@@ -28,8 +28,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  let regex = /[A-Z]\w*/gm;
-  return str.match(regex);
+  let regex = /\b[A-Z]\w*/gm;
+  if ((str.match(regex)) === null){
+    return [];
+  } else {
+    return (str.match(regex)) ;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
