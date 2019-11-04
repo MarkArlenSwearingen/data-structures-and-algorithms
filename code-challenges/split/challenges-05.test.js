@@ -102,9 +102,7 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  (recipe.ingredients).forEach(function(element) {
-    let myArr = ((element.split(' ')).slice(2));
-    result.push(myArr.join(' '));
+  (recipe.ingredients).forEach(element => {result.push((element.split(' ')).slice(2).join(' '));
   });
   return result;
 };
