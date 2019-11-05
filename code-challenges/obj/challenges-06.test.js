@@ -75,6 +75,9 @@ let characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  for (let property in arr) {
+    houses.push(arr[property].house);
+  }
   return houses;
 };
 
