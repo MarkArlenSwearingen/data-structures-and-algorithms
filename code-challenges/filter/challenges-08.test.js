@@ -27,6 +27,13 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  let regex = /[aeiou]/gim;
+  let result = [];
+  let words = arr.filter(function (value) {
+    if (value.match(regex)) {
+      result.push(value)
+    }
+  });return result;
 };
 
 
