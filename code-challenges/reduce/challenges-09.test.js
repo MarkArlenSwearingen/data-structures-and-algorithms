@@ -13,7 +13,7 @@ const countNumberOfElements = (arr) => {
   let count = 0;
   arr.reduce(() => {
     count ++;
-  }, 0); return count;
+  }, 0); return count;gi
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,6 +74,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((accumulator, value, index) => {
+    accumulator.push(value.name);
+    return accumulator;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
