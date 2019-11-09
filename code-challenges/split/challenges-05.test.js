@@ -180,6 +180,9 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
+  str.split(',').forEach((value) =>{
+    total = total + Number(value);
+  })
   return total;
 };
 
