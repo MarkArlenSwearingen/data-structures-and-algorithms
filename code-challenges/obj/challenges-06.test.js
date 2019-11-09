@@ -112,6 +112,13 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let children = false;
+  Object.entries(arr).forEach((value)=>{
+    if (character === value[1].name && value[1].children.length > 0){
+      children = true;
+    }
+  }
+  );return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
