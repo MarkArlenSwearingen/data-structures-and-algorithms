@@ -129,6 +129,16 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  let total = 0;
+  Object.keys(arr).forEach((index)=> {
+    total = total + 1;
+    if (arr[index].spouse !== null){
+      total = total + 1;
+    }
+    if (arr[index].children !== null){
+      total = total + arr[index].children.length
+    }
+  }); return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
