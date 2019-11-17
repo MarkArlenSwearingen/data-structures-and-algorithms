@@ -141,13 +141,11 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  let result = [];
-  arr.forEach(function(element){
+  return arr.filter(element => {
     if(element % 2 === 1 ){
-      result.push(element);
+      return element;
     }
-  })
-  return result;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -197,6 +195,10 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  return str.split('').filter(function(letter) {
+    return vowels.indexOf(letter.toLowerCase()) === -1;
+  }).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
