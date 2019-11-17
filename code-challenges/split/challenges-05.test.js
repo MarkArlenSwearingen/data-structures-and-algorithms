@@ -141,13 +141,11 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  let result = [];
-  arr.forEach(function(element){
+  return arr.filter(element => {
     if(element % 2 === 1 ){
-      result.push(element);
+      return element;
     }
-  })
-  return result;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
