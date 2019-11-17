@@ -195,6 +195,10 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  return str.split('').filter(function(letter) {
+    return vowels.indexOf(letter.toLowerCase()) === -1;
+  }).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
