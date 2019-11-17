@@ -96,10 +96,7 @@ const getBaseStatGreaterThan = (arr, minBaseStat) => {
   let char = arr.filter((val) => {
     return val.baseStat > minBaseStat
   });
-  let result = char.map(function(name){
-    return name.stat.name;
-  });
-  return result;
+  return char;
 };
 
 /* ------------------------------------------------------------------------------------------------
