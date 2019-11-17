@@ -169,6 +169,10 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  let noKids = arr.filter(value =>{
+    return (!value.children)
+   });
+   return noKids;
 };
 
 /* ------------------------------------------------------------------------------------------------
